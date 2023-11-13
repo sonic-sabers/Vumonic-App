@@ -15,7 +15,6 @@ import {
 
 const Stack = createStackNavigator();
 export default function LaunchStack() {
-  const navigation = useNavigation();
 
   const [dataRestored, setDataRestored] = useState(false);
   const [FetchingData, setFetchingData] = useState(true);
@@ -29,14 +28,14 @@ export default function LaunchStack() {
       return 'LoginStack'
     }
   };
-  const getInitialRoute = () => {
+  const _getInitialRoute = () => {
     if (dataRestored) {
       return 'AppStack'
     } else {
       return 'LoginStack'
     }
   }
-  const checkHasUserData = async () => {
+  const _checkHasUserData = async () => {
     let userData = await localStorage.get('userData');
     // Initialising the data and double cheking it
     if (userData) {
@@ -55,7 +54,7 @@ export default function LaunchStack() {
 
   useEffect(() => {
     let componentUnmounted = false;
-    checkHasUserData();
+    _checkHasUserData();
     return () => {
       componentUnmounted = true;
     };
@@ -83,6 +82,7 @@ export default function LaunchStack() {
       }
     }
   };
+  
   // TO login based to previous user login
   return !!dataRestored || !FetchingData ? (
     <>
@@ -91,7 +91,7 @@ export default function LaunchStack() {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName={getInitialRoute()}>
+          initialRouteName={_getInitialRoute()}>
           <Stack.Screen
             name="LoginStack"
             component={LoginStack}

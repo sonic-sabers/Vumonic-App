@@ -6,7 +6,6 @@ const initialDetails = {
   givenName: '',
   id: '',
   name: '',
-  photo
 };
 
 const authReducer = (state = initialDetails, action) => {
