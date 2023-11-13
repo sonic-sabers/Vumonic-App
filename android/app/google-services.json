@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "271900640888",
+    "project_id": "vumonic-cd63e",
+    "storage_bucket": "vumonic-cd63e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271900640888:android:cb9dffdc2807ff7b97cf8d",
+        "android_client_info": {
+          "package_name": "com.vumonic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXDMAdSLSGJeZWtdTAz8l7TskAdmMo0Z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

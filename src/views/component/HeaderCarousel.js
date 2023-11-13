@@ -2,8 +2,6 @@ import * as React from "react";
 import { Dimensions, View } from "react-native";
 import Animated, {
   Extrapolate,
-  FadeIn,
-  FadeOut,
   interpolate,
   useAnimatedStyle,
 } from "react-native-reanimated";
@@ -19,7 +17,7 @@ const window = Dimensions.get("window");
 const PAGE_HEIGHT = window.width * 1.2;
 const PAGE_WIDTH = window.width;
 
-function Index() {
+export const HeaderCarousel = () => {
 
   const baseOptions = {
     height: PAGE_HEIGHT,
@@ -28,10 +26,11 @@ function Index() {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ height: PAGE_HEIGHT - 60, marginTop: -60 }}>
       <Carousel
         {...baseOptions}
         loop
+        // autoPlay
         withAnimation={{
           type: "spring",
           config: {
@@ -109,8 +108,8 @@ const Card = {
     >
       <Animated.Image
         source={fruitItems[index % 3]}
-        entering={FadeIn.duration(100)}
-        exiting={FadeOut.duration(100)}
+        // entering={FadeIn.duration(100)}
+        // exiting={FadeOut.duration(100)}
         style={[
           {
             backgroundColor: colors[index],
@@ -128,7 +127,7 @@ const Card = {
             shadowOpacity: 0.44,
             shadowRadius: 10.32,
 
-            elevation: 16,
+            // elevation: 16,
           },
           parentCardStyle,
         ]}
@@ -138,4 +137,3 @@ const Card = {
   );
 };
 
-export default Index;
