@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { StyleSheet, Text, View, FlatList, SafeAreaView, Keyboard } from "react-native";
 import { HeaderCarousel } from "../views/component/HeaderCarousel";
+import colors from "../utils/colors";
 
 // definition of the Item, which will be rendered in the FlatList
 const Item = ({ name, details }) => (
@@ -77,6 +78,7 @@ const List = ({ searchPhrase, isInputActive, data, search, setSearchPhrase, onRe
         <FlatList
           ListHeaderComponent={<HeaderPart />}
           data={data}
+          style={{ paddingBottom: 100 }}
           onRefresh={onRefresh}
           refreshing={refreshing}
           renderItem={renderItem}
@@ -94,6 +96,7 @@ const styles = StyleSheet.create({
     margin: 10,
     // height: "85%",
     // width: "100%",
+
   },
   item: {
     margin: 30,
@@ -105,5 +108,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 5,
     fontStyle: "italic",
+    color: colors.mytext
+  },
+  details: {
+    fontSize: 14,
+    fontStyle: "italic",
+    color: colors.lightblack
   },
 });
