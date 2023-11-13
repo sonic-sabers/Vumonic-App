@@ -1,6 +1,10 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
+## Intro
+This app gives the basic UI functionality for the Vomionic Datalabs in which Auth,Carousel and some other features were added as of now and more will be added soon
+
+-I have added Config file and Env file for easy access in debug and will remove/delete post assignment view
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
